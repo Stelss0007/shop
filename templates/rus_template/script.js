@@ -1179,4 +1179,16 @@ jQuery(function ($) {
             $(this).css('display', $(this).find('dl').length ? '' : 'none');
         });
     });
+  
+  $(function ($) {
+   $(window).bind('scroll', function() {
+         if ($(window).scrollTop() > 170) {
+             $('.art-header').addClass('fixed');
+         }
+         else {
+            $('.art-header').removeClass('fixed');
+         }
+    });
+  });
+  
 }(jQuery));

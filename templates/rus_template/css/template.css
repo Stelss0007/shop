@@ -1,6 +1,6 @@
 #art-main
 {
-  background: #9DC5CD;
+  background: #f8f8f8;
   margin: 0 auto;
   font-size: 13px;
   font-family: Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
@@ -329,6 +329,8 @@ li p, .art-postcontent li p, .art-blockcontent li p
   left: 0;
   overflow: hidden;
   z-index: 0;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .art-slider-inner
@@ -358,9 +360,9 @@ li p, .art-postcontent li p, .art-blockcontent li p
   position: absolute;
   min-width: 50px;
   top: 48px;
-  left: 7.91%;
+
   line-height: 100%;
-  margin-left: -18px !important;
+
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -390,33 +392,34 @@ li p, .art-postcontent li p, .art-blockcontent li p
 
 .art-object227400126
 {
-  position: absolute;
-  top: 40px;
-  left: 97.5%;
-  margin-left: -195px !important;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
+   height: 24px;
+
+  margin: 0 auto;
+
+  max-width: 1200px;
   overflow: hidden;
+  position: relative;
+  top: 40px;
+  transform: rotate(0deg);
   z-index: 101;
-  width: 200px;
-  height: 24px;
 }
+
 
 .art-header
 {
   border: 1px solid #599CAB;
   border-top: none;
   margin: 0 auto;
-  height: 110px;
+/*  height: 110px;*/
+  height: 210px;
   background-image: url('../images/header.jpg');
+  background-size: 100% 100%;
   background-position: 0 0;
   background-repeat: no-repeat;
   position: relative;
-  width: 900px;
-  z-index: auto !important;
+/*  width: 900px;*/
+  width: 100%;
+/*  max-width: 1200px;*/
 }
 
 .responsive .art-header
@@ -496,7 +499,7 @@ ul.art-hmenu, ul.art-hmenu ul
 
 ul.art-hmenu
 {
-  display: inline-block;
+  display: block;
   vertical-align: bottom;
 }
 
@@ -525,7 +528,7 @@ ul.art-hmenu
   background-position: center;
 }
 
-.art-hmenu
+.art-hmenu li
 {
   float: right;
 }
@@ -1065,8 +1068,12 @@ ul.art-hmenu>li.ext>.ext-r, ul.art-hmenu>li.ext>.ext-l, ul.art-hmenu>li.ext>.ext
   margin: 0 auto;
   position: relative;
   cursor: auto;
-  width: 900px;
+/*  width: 900px;*/
+  width: 100%;
+  max-width: 1200px;
   z-index: auto !important;
+  box-shadow: 0px 0px 20px 0 #ccc;
+  border-radius: 0 0 8px 8px;
 }
 
 .art-layout-wrapper
@@ -1476,11 +1483,11 @@ ul.art-vmenu>li>ul>li:first-child:before, ul.art-vmenu>li>ul>li:first-child:afte
 {
   background: #D0E3E7;
   background: rgba(208, 227, 231, 0.2);
-  -webkit-border-radius: 6px;
+/*  -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
-  border-radius: 6px;
+  border-radius: 6px;*/
   border: 1px solid rgba(123, 176, 188, 0.2);
-  padding: 7px;
+/*  padding: 7px;*/
   margin: 7px;
 }
 
@@ -1554,7 +1561,7 @@ div.art-block img
 
 .art-block ul>li:before
 {
-  content: url('../images/blockbullets.png');
+/*  content: url('../images/blockbullets.png');*/
   margin-right: 6px;
   bottom: 2px;
   position: relative;
@@ -1586,7 +1593,7 @@ div.art-block img
 
 .art-block ul>li
 {
-  padding-left: 12px;
+/*  padding-left: 12px;*/
 }
 
 .art-breadcrumbs
@@ -2516,7 +2523,7 @@ img.art-lightbox-image.active
 
 .art-content-layout .art-sidebar1
 {
-  border-right: 1px dotted #9DC5CD;
+/*  border-right: 1px dotted #9DC5CD;*/
   margin: 0 auto;
   width: 280px;
 }
@@ -3009,3 +3016,187 @@ div.img_caption p.img_caption
 .manufacturer-view-default .manufacturer a:hover img {
   opacity: 1;
 } 
+
+
+/*Табы на странице товара*/
+dl.tabs {
+ float: left;
+ margin: 50px 0 0 0;
+ z-index: 50;
+ clear:both;
+ 
+}
+ 
+dl.tabs dt {
+ float: left;
+ padding: 4px 10px;
+ border-left: 1px solid #ccc;
+ border-right: 1px solid #ccc;
+ border-top: 1px solid #ccc;
+ margin-right: 3px;
+ background: #f0f0f0;
+ color: #666;
+ }
+ 
+dl.tabs dt.open {
+ background: #F9F9F9;
+ border-bottom: 1px solid #F9F9F9;
+ z-index: 100;
+ color: #000;
+ 
+}
+ 
+div.current {
+ clear: both;
+ border: 1px solid #ccc;
+ padding: 10px 10px;
+ 
+}
+ 
+div.current dd {
+ padding: 0;
+ margin: 0;
+ }
+ 
+dl#content-pane.tabs {
+ margin: 1px 0 0 0;
+ }
+ 
+ .product-fields .product-field, .product-related-categories dd .product-field {
+   float: none !important;
+ }
+ 
+ .product-field-type-B, .product-field-type-S, .product-field-type-I {
+   padding: 0;
+ }
+ 
+ span.quantity-controls {
+   line-height: 15px;
+ }
+ 
+ .product-price strong {
+   display: none;
+ }
+ 
+ .productdetails-view .addtocart-bar {
+   padding: 0;
+ }
+ 
+ 
+ .main-image img {
+   max-width: 330px;
+   max-height: 400px
+ }
+ 
+ 
+ .additional-images > div {
+   width: 100px;
+   height: 100px;
+   text-align: center;
+   overflow: hidden;
+   margin: 2px;
+   border: 1px solid #ddd;
+ }
+ .additional-images > div.clear {
+   display: none;
+ }
+ 
+ .additional-images img {
+    height: auto;
+    margin-right: 8px;
+    min-height: 100px;
+    min-width: 100px;
+}
+
+.product a img {
+  width: 150px;
+}
+
+ul.art-hmenu {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ 
+.art-hmenu li:hover {
+  background: none repeat scroll 0 0 rgba(7, 75, 118, 0.2) !important;
+   border-radius: 5px;
+}
+
+.art-object227400126 form.art-search
+{
+    background-image: none;
+    border: 0 none;
+    display: block;
+    float: right;
+    left: -10px;
+    line-height: 0;
+    margin: 5px 20px 5px 5px;
+    padding: 0;
+    position: relative;
+    top: 0;
+    width: 200px;
+}
+
+
+.VMmenu li{
+  position: relative;
+}
+
+.VMmenu li:hover > div{
+  text-shadow: 0px 0px 2px #333;
+  padding-left: 10px;
+}
+
+.VmArrowdown {
+    background: url("../images/vmgeneral/arrow_down.png") no-repeat scroll right top rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 16px;
+    left: 0;
+    padding: 0 12px;
+    position: absolute;
+    top: 0;
+    width: 16px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.VMmenu li > div {
+    background: none repeat scroll 0 0 #00c0eb;
+    border-radius: 2px;
+    color: #fff;
+    display: block;
+    margin: 0;
+    padding: 8px;
+}
+
+.VMmenu li a {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.VMmenu li ul {
+  background: none repeat scroll 0 0 rgba(0, 192, 235, 0.49)
+}
+.art-block .VMmenu li ul {
+  margin-left: 0px !important;
+}
+
+.VMmenu li ul li>div{
+border: none;
+background: none repeat scroll 0 0 rgba(0, 192, 235, 0.51);
+}
+.art-block li {
+  margin: 1px 0 0 5px;
+}
+ul.VMmenu, .VMmenu ul, .VMmenu li {
+  padding: 0;
+}
+
+
+.fixed {
+  position: fixed;
+  z-index: 900;
+  top: -170px;
+  box-shadow: 0 0 10px 0 #ccc;
+}

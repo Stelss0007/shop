@@ -50,6 +50,9 @@ JHtml::_('behavior.framework', true);
     <script src="<?php echo $templateUrl; ?>/script.js"></script>
     <script>if (document._artxJQueryBackup) jQuery = document._artxJQueryBackup;</script>
     <script src="<?php echo $templateUrl; ?>/script.responsive.js"></script>
+
+    <link rel="stylesheet" href="<?php echo $templateUrl; ?>/js/fancybox/jquery.fancybox.css" />
+    <script src="<?php echo $templateUrl; ?>/js/fancybox/jquery.fancybox.js"></script>
 </head>
 <body>
 
