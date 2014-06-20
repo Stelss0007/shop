@@ -2595,5 +2595,22 @@ function lowStockWarningEmail($virtuemart_product_id) {
 		}
 		return $shoppers;
 	}
+  
+  function untreeCat($vm_catid, &$ccont){
+        $db = JFactory::getDBO();
+        $query = 'SELECT `category_child_id` FROM `#__virtuemart_category_categories` WHERE `category_parent_id`="'.$vm_catid.'"';
+        $db->setQuery($query);
+        $db->query();        
+        $rows = $db->loadRowList();
+        if (empty($rows))    {
+            return;
+        } else {            
+            foreach($rows as $row) {
+                array_push($ccont, $row[0]);
+                $kat = $row[0];
+                $this->untreeCat($kat, $ccont);                
+            }
+        }
+    }
 }
 // No closing tag

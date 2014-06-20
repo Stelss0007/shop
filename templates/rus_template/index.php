@@ -46,7 +46,9 @@ JHtml::_('behavior.framework', true);
     <script>if ('undefined' != typeof jQuery) document._artxJQueryBackup = jQuery;</script>
     <script src="<?php echo $templateUrl; ?>/jquery.js"></script>
     <script>jQuery.noConflict();</script>
-
+    
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    
     <script src="<?php echo $templateUrl; ?>/script.js"></script>
     <script>if (document._artxJQueryBackup) jQuery = document._artxJQueryBackup;</script>
     <script src="<?php echo $templateUrl; ?>/script.responsive.js"></script>
@@ -57,19 +59,26 @@ JHtml::_('behavior.framework', true);
 <body>
 
 <div id="art-main">
-<header class="art-header clearfix"><?php echo $view->position('position-30', 'art-nostyle'); ?>
+<header class="art-header clearfix">
+  <div style="width: 1200px; margin: 0 auto; position: relative;">
+    <div style="position: absolute; z-index: 1; left: 370px;">
+      <img src="/images/banner.png" width="550">
+    </div>
+  </div>
+    <?php echo $view->position('position-30', 'art-nostyle'); ?>
 
 
     <div class="art-shapes">
-<h1 class="art-headline" data-left="7.91%">
-    <a href="<?php echo $document->baseurl; ?>/"><?php echo 'UNICOMF';//$this->params->get('siteTitle'); ?></a>
-</h1>
-
-
-            </div>
+      <h1 class="art-headline" data-left="7.91%">
+        <a href="<?php echo $document->baseurl; ?>/"><img src="/images/logo.png" width="350"></a>
+      </h1>
+    </div>
 <div class="art-textblock art-object227400126" data-left="97.5%">
     <form class="art-search" name="Search" action="<?php echo $document->baseurl; ?>/index.php/component/search/">
-    <input type="text" value="" name="searchword">
+    <input type="text" value="" name="keyword">
+    <input type="hidden" value="0" name="limitstart">
+    <input type="hidden" value="com_virtuemart" name="option">
+    <input type="hidden" value="category" name="view">
     <input type="submit" value="Search" name="search" class="art-search-button">
 </form>
 </div>
@@ -89,8 +98,15 @@ JHtml::_('behavior.framework', true);
 
                     
 </header>
+  
+<div class="header_helper" style="display: none;"></div>
+
+<div>
+   <?php echo $view->position('position-15', 'art-nostyle'); ?>
+</div>
+
 <div class="art-sheet clearfix">
-            <?php echo $view->position('position-15', 'art-nostyle'); ?>
+           
 <?php echo $view->positions(array('position-16' => 33, 'position-17' => 33, 'position-18' => 34), 'art-block'); ?>
 <div class="art-layout-wrapper clearfix">
                 <div class="art-content-layout">
@@ -129,13 +145,45 @@ JHtml::_('behavior.framework', true);
             </div>
 <?php echo $view->positions(array('position-9' => 33, 'position-10' => 33, 'position-11' => 34), 'art-block'); ?>
 <?php echo $view->position('position-26', 'art-nostyle'); ?>
-
-<footer class="art-footer clearfix"><?php echo $view->position('position-27', 'art-nostyle'); ?></footer>
-
     </div>
-    <p class="art-page-footer">
-        <span id="art-footnote-links"><a href="http://www.artisteer.com/?p=joomla_templates" target="_blank">Joomla template</a> created with Artisteer.</span>
-    </p>
+
+<footer class="art-footer clearfix">
+  <div class="footer-content clearfix">
+    <div class="row">
+      <div class="floatleft width40">
+        <address class="copy">&copy;&nbsp;Интернет-магазин<br> «Юникомф&trade;»&nbsp;2013&ndash;<?php echo date('Y');?></address>
+        <div class="info">
+ 
+          График работы <br>
+          Пн-Пт: с 8:00 до 21:00<br>
+          Суббота: с 9:00 до 20:00<br>
+          Воскресенье: с 10:00 до 19:00<br>
+
+        </div>
+      </div>
+      <div class="floatleft width40">
+         Контактная информация <br>
+         Телефон: +3809700000<br>
+         email: email@mail.com<br>
+         Адресс: Черкассы, ул. Смелянская 30<br>
+      </div>
+      <div class="floatleft width20">
+        <ul class="body-footer-social">
+					<li class="body-footer-social-title">Следите за нами:</li>
+          <li class="body-footer-social-i"><a target="_blank" class="vk" href="/http://vk.com/club20877147"></a></li>
+          <li class="body-footer-social-i"><a target="_blank" class="fb" href="http://facebook.com/rozetka.ua"></a></li>
+          <li class="body-footer-social-i"><a target="_blank" class="twitter" href="http://twitter.com/rozetka_news"></a></li>
+          <li class="body-footer-social-i"><a target="_blank" class="youtube" href="http://www.youtube.com/subscription_center?add_user=rozetkaua"></a></li>
+        </ul>
+      </div>
+      
+    </div>
+    <div class="row">
+      <?php echo $view->position('position-27', 'art-nostyle'); ?>
+    </div>
+  </div>
+</footer>
+    
 </div>
 
 

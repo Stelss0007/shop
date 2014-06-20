@@ -75,7 +75,7 @@ if (VmConfig::get ('showCategory', 1) and empty($this->keyword)) {
 				// Show the horizontal seperator
 				if ($iCol == 1 && $iCategory > $categories_per_row) {
 					?>
-					<div class="horizontal-separator"></div>
+<!--					<div class="horizontal-separator"></div>-->
 					<?php
 				}
 
@@ -207,14 +207,14 @@ if (!empty($this->products)) {
 		// Show the horizontal seperator
 		if ($iBrowseCol == 1 && $iBrowseProduct > $BrowseProducts_per_row) {
 			?>
-		<div class="horizontal-separator"></div>
+<!--		<div class="horizontal-separator"></div>-->
 			<?php
 		}
 
 		// this is an indicator wether a row needs to be opened or not
 		if ($iBrowseCol == 1) {
 			?>
-	<div class="row">
+	<div class="row product-item">
 	<?php
 		}
 
@@ -268,7 +268,7 @@ if (!empty($this->products)) {
 					<?php } ?>
 				</div>
 
-				<div class="width floatleft" style="width: 710px; margin-left: 10px;">
+				<div class="width floatleft" style="width: 695px; margin-left: 10px;">
 
 					<h2><?php echo JHTML::link ($product->link, $product->product_name); ?></h2>
 

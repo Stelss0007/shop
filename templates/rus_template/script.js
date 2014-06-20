@@ -1181,14 +1181,21 @@ jQuery(function ($) {
     });
   
   $(function ($) {
+   $('.header_helper').height('165px');
    $(window).bind('scroll', function() {
-         if ($(window).scrollTop() > 170) {
-             $('.art-header').addClass('fixed');
+         if ($(window).scrollTop() > 165) {
+           $('.header_helper').show();
+           $('.art-header').addClass('fixed');
+           $('.art-object227400126').addClass('search-fixed');
          }
          else {
-            $('.art-header').removeClass('fixed');
+           $('.header_helper').hide();
+           $('.art-header').removeClass('fixed');
+           $('.art-object227400126').removeClass('search-fixed');
          }
     });
+  
+  
   });
   
 }(jQuery));
