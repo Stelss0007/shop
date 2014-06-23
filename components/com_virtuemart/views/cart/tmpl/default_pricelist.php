@@ -219,7 +219,7 @@ foreach ($this->cart->products as $pkey => $prow) {
 	$colspan = 2;
 } ?>
 <tr>
-	<td colspan="4">&nbsp;</td>
+	<td colspan="4"><hr/></td>
 
 	<td colspan="<?php echo $colspan ?>">
 		<hr/>
@@ -395,7 +395,7 @@ foreach ($this->cart->cartData['DATaxRulesBill'] as $rule) {
 </tr>
 <?php } ?>
 <tr>
-	<td colspan="4">&nbsp;</td>
+	<td colspan="4"><hr/></td>
 	<td colspan="<?php echo $colspan ?>">
 		<hr/>
 	</td>

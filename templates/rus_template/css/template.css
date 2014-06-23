@@ -3294,3 +3294,15 @@ ul.body-footer-social {
 .virtuemart_search input[type="text"], .virtuemart_search input[type="password"], .virtuemart_search input[type="email"], .virtuemart_search input[type="url"] {
   width: 70%;
 }
+
+.vm-pagination .pagenav {
+  display: inline;
+}
+
+.vm-pagination ul li:before {
+  content: none;
+}
+
+.cart-summary input {
+  width: 40px;
+}

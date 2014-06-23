@@ -325,13 +325,22 @@ class VirtueMartModelProduct extends VmModel {
  			}
 
 			if ($virtuemart_category_id > 0) {
-				$joinCategory = TRUE;
-				$where[] = ' `pc`.`virtuemart_category_id` = ' . $virtuemart_category_id;
+//				$joinCategory = TRUE;
+//				$where[] = ' `pc`.`virtuemart_category_id` = ' . $virtuemart_category_id;
+        $joinCategory = true ;
+        $catscont = array();
+        $this->untreeCat($virtuemart_category_id, $catscont);
+        $qkat = ' `pc`.`virtuemart_category_id` IN ('.$virtuemart_category_id;
+        foreach ($catscont as &$kat){
+        $qkat .= ', '.$kat;
+        }
+        $qkat .= ')';
+        $where[] = $qkat;
 			} else if ($isSite and !VmConfig::get('show_uncat_child_products',TRUE)) {
 				$joinCategory = TRUE;
 				$where[] = ' `pc`.`virtuemart_category_id` > 0 ';
 			}
-
+//print_r($where);exit;
 			if ($this->product_parent_id) {
 				$where[] = ' p.`product_parent_id` = ' . $this->product_parent_id;
 			}
@@ -2597,19 +2606,21 @@ function lowStockWarningEmail($virtuemart_product_id) {
 	}
   
   function untreeCat($vm_catid, &$ccont){
-        $db = JFactory::getDBO();
-        $query = 'SELECT `category_child_id` FROM `#__virtuemart_category_categories` WHERE `category_parent_id`="'.$vm_catid.'"';
-        $db->setQuery($query);
-        $db->query();        
-        $rows = $db->loadRowList();
-        if (empty($rows))    {
-            return;
-        } else {            
-            foreach($rows as $row) {
-                array_push($ccont, $row[0]);
-                $kat = $row[0];
-                $this->untreeCat($kat, $ccont);                
-            }
+        $dbx = JFactory::getDBO();
+        $q = 'SELECT `category_child_id` FROM `ciohg_virtuemart_category_categories` WHERE `category_parent_id`="'.$vm_catid.'"';
+        //echo $q;
+        $dbx->setQuery($q);
+        $dby = $dbx->query();
+        //echo $dby->num_rows;exit;
+        if (!$dby->num_rows) {
+          return;
+        } else {
+        while($tt = $dby->fetch_row()) 
+          {
+          array_push($ccont, $tt[0]);
+          $kat = $tt[0];
+          $this->untreeCat($kat, $ccont);
+          }
         }
     }
 }
