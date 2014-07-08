@@ -40,7 +40,7 @@ JHtml::_('behavior.framework', true);
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <link rel="stylesheet" href="<?php echo $templateUrl; ?>/css/template.css" media="screen">
     <!--[if lte IE 7]><link rel="stylesheet" href="<?php echo $templateUrl; ?>/css/template.ie7.css" media="screen" /><![endif]-->
-    <link rel="stylesheet" href="<?php echo $templateUrl; ?>/css/template.responsive.css" media="all">
+<!--    <link rel="stylesheet" href="<?php echo $templateUrl; ?>/css/template.responsive.css" media="all">-->
 
 
     <script>if ('undefined' != typeof jQuery) document._artxJQueryBackup = jQuery;</script>
@@ -62,7 +62,7 @@ JHtml::_('behavior.framework', true);
 <header class="art-header clearfix">
   <div style="width: 1200px; margin: 0 auto; position: relative;">
     <div style="position: absolute; z-index: 1; left: 370px;">
-      <img src="/images/banner.png" width="550">
+<!--      tel-->
     </div>
   </div>
     <?php echo $view->position('position-30', 'art-nostyle'); ?>

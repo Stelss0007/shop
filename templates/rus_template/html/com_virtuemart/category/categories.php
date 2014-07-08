@@ -34,7 +34,6 @@ $category_cellwidth = ' width'.floor ( 100 / $categories_per_row );
 // Separator
 $verticalseparator = " vertical-separator";
 ?>
-
 <div class="category-view">
 
 <?php // Start the Output
@@ -66,11 +65,12 @@ if ($this->category->children ) {
 			    <div class="spacer">
 				    <h2>
 					    <a href="<?php echo $caturl ?>" title="<?php echo $category->category_name ?>">
-					    <?php echo $category->category_name ?>
-					    <br />
 					    <?php // if ($category->ids) {
 						    echo $category->images[0]->displayMediaThumb("",false);
 					    //} ?>
+                <div class="category-name">
+                  <?php echo $category->category_name ?>
+                </div>
 					    </a>
 				    </h2>
 			    </div>

@@ -499,6 +499,18 @@ class VirtueMartControllerCart extends JController {
 		} else if(isset($_POST['setpayment']) or $task=='setpayment'){
 			$this->setpayment();
 		} else if($task=='confirm'){
+      
+      //Отправка смс
+      $sms_login = '380978803826';
+      $sms_pass = 'bju5fmz';
+      $sms_from = 'UNICOMF';
+      $sms_to = '380978803826;380984255888';
+      $sms_text = 'У вас появился новый заказ';
+      $sms_text = iconv("utf-8", "windows-1251", $sms_text);
+      $sms_text = base64_encode($sms_text);
+      $sms_url = "https://gate.smsclub.mobi/hfw_smpp_addon/httpsendsms.php?username=$sms_login&password=$sms_pass&from=$sms_from&to=$sms_to&text=$sms_text";
+      //file_get_contents($sms_url); отправка смс
+
 			$cart->confirmDone();
 			$view = $this->getView('cart', 'html');
 			$view->setLayout('order_done');

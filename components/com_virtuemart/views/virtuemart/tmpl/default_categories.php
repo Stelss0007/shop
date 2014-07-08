@@ -13,7 +13,6 @@ $category_cellwidth = ' width' . floor(100 / $categories_per_row);
 // Separator
 $verticalseparator = " vertical-separator";
 ?>
-
 <div class="category-view">
 
     <h4><?php echo JText::_('COM_VIRTUEMART_CATEGORIES') ?></h4>
@@ -52,13 +51,19 @@ $verticalseparator = " vertical-separator";
     	    <div class="spacer">
     		<h2>
     		    <a href="<?php echo $caturl ?>" title="<?php echo $category->category_name ?>">
-    <?php echo $category->category_name ?>
-    			<br />
 	    <?php
 	    if (!empty($category->images)) {
 		echo $category->images[0]->displayMediaThumb("", false);
 	    }
 	    ?>
+      <div class="category-name">
+          <?php echo $category->category_name ?>
+      </div>
+              
+      <div class="category-view-btn">
+          ПРОСМОТРЕТЬ
+      </div>
+              
     		    </a>
     		</h2>
     	    </div>
@@ -86,3 +91,12 @@ if ($iCol != 1) {
 }
 ?>
 </div>
+<style>
+  #art-main .art-content-layout .art-sidebar1,
+  .breadcrumbs,
+  .horizontal-separator
+  {
+    display: none;
+    
+  }
+</style>

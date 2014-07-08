@@ -1,0 +1,5 @@
+Install plugin plg_onepage_system.zip > Plugin must be published. 
+Check plugin parameters (checkbox control Ship to address checked and Register checked settings). 
+Upload html folder via FTP to folder of your default and assigned Joomla 2.5 template. Done!
+Video Install: http://www.youtube.com/watch?v=rRMmx8HOn0E
+Video Demo: http://www.youtube.com/watch?v=Krl9LFDvuMc 

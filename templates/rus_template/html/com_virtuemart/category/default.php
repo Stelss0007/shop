@@ -44,7 +44,6 @@ if (empty($this->keyword) and !empty($this->category)) {
 <div class="category_description">
 	<?php echo $this->category->category_description; ?>
 </div>
-
 <?php
 }
 
@@ -102,11 +101,12 @@ if (VmConfig::get ('showCategory', 1) and empty($this->keyword)) {
 					<div class="spacer">
 						<h2>
 							<a href="<?php echo $caturl ?>" title="<?php echo $category->category_name ?>">
-								<?php echo $category->category_name ?>
-								<br/>
 								<?php // if ($category->ids) {
 								echo $category->images[0]->displayMediaThumb ("", FALSE);
 								//} ?>
+                <div class="category-name">
+                  <?php echo $category->category_name ?>
+                </div>
 							</a>
 						</h2>
 					</div>

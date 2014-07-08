@@ -1195,6 +1195,19 @@ jQuery(function ($) {
          }
     });
   
+  $('.category').mouseenter(
+    function(){
+      var $this = $(this);
+      $this.find('img').animate({height: "400px", width: "400px", marginTop: "-20px", marginLeft: "-20px", opacity: "0.6", rotation: "30deg"}, 500);
+      $this.find('.category-name').animate({fontSize: "22px", height: "40px", paddingTop: "20px"}, 500);
+      $this.find('.category-view-btn').show();
+    }).mouseleave(function() {
+      var $this = $(this);
+      $this.find('img').animate({height: "350px", width: "350px", marginTop: "0px", marginLeft: "0px", opacity: "1", rotation: "0deg"}, 300);
+      $this.find('.category-name').animate({fontSize: "14px", height: "30px", paddingTop: "10px"}, 300);
+      $this.find('.category-view-btn').hide();
+    }
+  );
   
   });
   
