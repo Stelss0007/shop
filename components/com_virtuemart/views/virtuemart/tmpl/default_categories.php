@@ -60,9 +60,11 @@ $verticalseparator = " vertical-separator";
           <?php echo $category->category_name ?>
       </div>
               
+<!--      
       <div class="category-view-btn">
           ПРОСМОТРЕТЬ
       </div>
+-->
               
     		    </a>
     		</h2>

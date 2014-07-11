@@ -61,8 +61,16 @@ JHtml::_('behavior.framework', true);
 <div id="art-main">
 <header class="art-header clearfix">
   <div style="width: 1200px; margin: 0 auto; position: relative;">
-    <div style="position: absolute; z-index: 1; left: 370px;">
+    <div style="position: absolute; z-index: 1; left: 470px; top: 25px; font-size: 22px; font-weight: bold; width: 340px;">
 <!--      tel-->
+        <div>
+          <img style="float: left;" width="80" src="/templates/rus_template/images/phone2.gif">
+          <span style="float: left; margin: 20px 12px;">
+            +38(098) 42 - 55 - <span style="color: #FAA528">888</span>
+          <br> 
+            +38(063) 43 - 55 - <span style="color: #FAA528">888</span>
+          </span>
+        </div>
     </div>
   </div>
     <?php echo $view->position('position-30', 'art-nostyle'); ?>
@@ -150,22 +158,27 @@ JHtml::_('behavior.framework', true);
 <footer class="art-footer clearfix">
   <div class="footer-content clearfix">
     <div class="row">
-      <div class="floatleft width40">
-        <address class="copy">&copy;&nbsp;Интернет-магазин<br> «Юникомф&trade;»&nbsp;2013&ndash;<?php echo date('Y');?></address>
+      <div class="floatleft width30">
+        <a href="/">
+          <img width="200" src="/images/logo.png" style="width: 100%; max-width: 200px; height: auto; background-color: #fff; border: 2px solid #000;">
+        </a><br>
+        <address class="copy" style="font-style: normal;">&copy;&nbsp;Интернет-магазин<br> «Юникомф&trade;»&nbsp;2013&ndash;<?php echo date('Y');?></address>
         <div class="info">
- 
           График работы <br>
-          Пн-Пт: с 8:00 до 21:00<br>
-          Суббота: с 9:00 до 20:00<br>
+          Пн-Пт: с 9:00 до 19:00<br>
+          Суббота: с 9:00 до 19:00<br>
           Воскресенье: с 10:00 до 19:00<br>
 
         </div>
       </div>
-      <div class="floatleft width40">
+      <div class="floatleft width10" style="padding-right: 10px;">
+        <img src="/templates/rus_template/images/qr.png" width="120" style="border: 2px solid #000;">
+      </div>
+      <div class="floatleft width30">
          Контактная информация <br>
-         Телефон: +3809700000<br>
+         Телефон: +38(098)42-55-888, +38(063)43-55-888<br>
          email: email@mail.com<br>
-         Адресс: Черкассы, ул. Смелянская 30<br>
+         Адресс: г. Черкассы ул. Смелянская, 33<br>
       </div>
       <div class="floatleft width20">
         <ul class="body-footer-social">
