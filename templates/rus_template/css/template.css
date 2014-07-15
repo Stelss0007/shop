@@ -702,7 +702,7 @@ ul.art-hmenu li li:after
   left: 0;
   right: 0;
   z-index: 1;
-  border-bottom: 1px dotted #E35C2B;
+  border-bottom: 1px dotted #101643;
 }
 
 .desktop-nav ul.art-hmenu li li:first-child:before, .desktop-nav ul.art-hmenu li li:first-child:after
@@ -3159,7 +3159,8 @@ ul.art-hmenu {
 
 .VMmenu li:hover > div{
   text-shadow: 0px 0px 2px #333;
-  padding-left: 10px;
+  //padding-left: 10px;
+  background: #3557AA;
 }
 
 .VmArrowdown {
@@ -3439,4 +3440,17 @@ table.cart-summary tr th {
   height: 44px;
   padding-left: 70px;
   padding-top: 20px;
+}
+
+.VMmenu ul li:before{
+    content: "";
+    display: block;
+    width: 0; 
+    height: 0; 
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 12px solid #727272; 
+    position: absolute;
+    top: 16px;
+    left: -12px;
 }

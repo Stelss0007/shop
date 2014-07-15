@@ -350,9 +350,9 @@ if (VmConfig::get('ask_question', 0) == 1) {
                 }
                 
 /// Создаем 4 вкладку. которая будет в качестве шаблона.
-                $output .= $myTabs->startPanel( 'Вкладочка', 'tab5' );
-                $output .= ' В переменную $output добавляйте что угодно и оно отобразиться.';
-                $output .= $myTabs->endPanel();
+//                $output .= $myTabs->startPanel( 'Вкладочка', 'tab5' );
+//                $output .= ' В переменную $output добавляйте что угодно и оно отобразиться.';
+//                $output .= $myTabs->endPanel();
 //окончание панели
                 $output .= $myTabs->endPane();
 //Выводим все что насоздавали

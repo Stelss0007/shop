@@ -179,9 +179,13 @@ JHtml::_('behavior.framework', true);
          Телефон: +38(098)42-55-888, +38(063)43-55-888<br>
          email: email@mail.com<br>
          Адресс: г. Черкассы ул. Смелянская, 33<br>
+         <div style="margin: 40px 0px 10px -128px;">
+            <img src="/templates/rus_template/images/map-1.png" width="410">
+         </div>
       </div>
       <div class="floatleft width20">
         <ul class="body-footer-social">
+
 					<li class="body-footer-social-title">Следите за нами:</li>
           <li class="body-footer-social-i"><a target="_blank" class="vk" href="/http://vk.com/club20877147"></a></li>
           <li class="body-footer-social-i"><a target="_blank" class="fb" href="http://facebook.com/rozetka.ua"></a></li>
